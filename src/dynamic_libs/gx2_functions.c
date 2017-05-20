@@ -94,7 +94,7 @@ EXPORT_DECL(void, GX2RSetAllocator, void * (* allocFunc)(u32, u32, u32), void (*
 void InitGX2FunctionPointers(void)
 {
     unsigned int *funcPointer = 0;
-    unsigned int gx2_handle;
+    u32 gx2_handle;
     OSDynLoad_Acquire("gx2.rpl", &gx2_handle);
 
     OS_FIND_EXPORT(gx2_handle, GX2Init);

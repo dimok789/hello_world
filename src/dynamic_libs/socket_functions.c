@@ -42,11 +42,11 @@ EXPORT_DECL(int, inet_aton, const char *cp, struct in_addr *inp);
 
 void InitSocketFunctionPointers(void)
 {
-    unsigned int nsysnet_handle;
+    u32 nsysnet_handle;
     unsigned int *funcPointer = 0;
     OSDynLoad_Acquire("nsysnet.rpl", &nsysnet_handle);
 
-    unsigned int nn_ac_handle;
+    u32 nn_ac_handle;
     int(*ACInitialize)();
     int(*ACGetStartupId) (unsigned int *id);
     int(*ACConnectWithConfigId) (unsigned int id);

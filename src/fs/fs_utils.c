@@ -81,7 +81,8 @@ int LoadFileToMem(const char *filepath, u8 **inbuffer, u32 *size)
         readBytes = read(iFd, buffer + done, blocksize);
         if(readBytes <= 0)
             break;
-        done += readBytes;
+		else
+			done += readBytes;
     }
 
     close(iFd);
@@ -93,10 +94,6 @@ int LoadFileToMem(const char *filepath, u8 **inbuffer, u32 *size)
 	}
 
 	*inbuffer = buffer;
-
-    //! sign is optional input
-    if(size)
-        *size = filesize;
 
 	return filesize;
 }

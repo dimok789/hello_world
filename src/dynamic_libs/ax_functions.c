@@ -48,7 +48,7 @@ EXPORT_DECL(void, AXSetVoiceLoopOffset, void *v, u32 offset);
 void InitAXFunctionPointers(void)
 {
     unsigned int *funcPointer = 0;
-    unsigned int sound_handle;
+    u32 sound_handle;
     OSDynLoad_Acquire("sndcore2.rpl", &sound_handle);
 
     OS_FIND_EXPORT(sound_handle, AXInitWithParams);

@@ -87,7 +87,7 @@ int Menu_Main(void)
     OSScreenFlipBuffersEx(0);
     OSScreenFlipBuffersEx(1);
 
-    int vpadError = -1;
+    s32 vpadError = -1;
     VPADData vpad;
 
     while(1)
