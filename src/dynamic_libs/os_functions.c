@@ -24,7 +24,7 @@
 #include "common/common.h"
 #include "os_functions.h"
 
-unsigned int coreinit_handle = 0;
+u32 coreinit_handle = 0;
 
 //!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //! Lib handle functions

@@ -30,7 +30,7 @@ EXPORT_DECL(void, VPADRead, int chan, VPADData *buffer, u32 buffer_size, s32 *er
 void InitVPadFunctionPointers(void)
 {
     unsigned int *funcPointer = 0;
-    unsigned int vpad_handle;
+    u32 vpad_handle;
     OSDynLoad_Acquire("vpad.rpl", &vpad_handle);
 
     OS_FIND_EXPORT(vpad_handle, VPADInit);
